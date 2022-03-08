@@ -42,7 +42,7 @@ class SesionView{
                 <label>Película</label>
                 <input name='pelicula'><br>
                 <label>Fecha</label>
-                <input type='date'name='fecha'><br>
+                <input type='datetime-local' name='fecha'><br>
                 <label>Butacas disponibles</label>
                 <input type='number' min='0' max='400' name='butacas_disponibles'><br>
                 <input type='submit'>
@@ -59,7 +59,7 @@ class SesionView{
                 <label>Película</label>
                 <input name='pelicula' value=".$data['pelicula']."><br>
                 <label>Fecha</label>
-                <input type='date' name='fecha' value=".$data['fecha']."><br>
+                <input type='datetime-local' name='fecha' value=".$data['fecha']."><br>
                 <label>Butacas disponibles</label>
                 <input type='number' min='0' max='400' name='butacas_disponibles' value=".$data['butacas_disponibles']."><br>
                 <input type='hidden' name='id' value=".$_GET['id'].">

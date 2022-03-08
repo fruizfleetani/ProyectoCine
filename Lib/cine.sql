@@ -84,7 +84,7 @@ CREATE TABLE `sesiones` (
 --
 
 INSERT INTO `sesiones` VALUES
-(1, 'Spider-Man', '2022-03-22 16:00', 100),
+(1, 'Spider-Man', '2022-03-22 16:00', 3),
 (2, 'Batman', '2022-03-17 18:00', 200),
 (3, 'Los pingüinos de Magadascar', '2022-03-18 20:00', 150),
 (4, 'Lo Imposible', '2022-03-14 21:00', 100);
@@ -113,7 +113,7 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`id`, `nombre`, `apellidos`, `correo`, `password`, `alta`) VALUES
 (2, 'Paula', 'Huertas Romano', 'paula@gmail.com', '$2y$04$YwP1ZcC2A4UYaGCSXwuToOkkR3cfQovXC.GEjGOW3qJLfGBPB7/gG', 0),
 (4, 'Nuria', 'Jiménez Garrido', 'nuria@gmail.com', '$2y$04$YwP1ZcC2A4UYaGCSXwuToOkkR3cfQovXC.GEjGOW3qJLfGBPB7/gG', 1),
-(5, 'Maria Isabel', 'Rodriguez', 'fernandoruizfleetani@gmail.com', '$2y$04$YwP1ZcC2A4UYaGCSXwuToOkkR3cfQovXC.GEjGOW3qJLfGBPB7/gG', 1);
+(5, 'Maria Isabel', 'Rodriguez', 'fernandilloyt@gmail.com', '$2y$04$YwP1ZcC2A4UYaGCSXwuToOkkR3cfQovXC.GEjGOW3qJLfGBPB7/gG', 1);
 
 --
 -- ALTER TABLE
