@@ -32,8 +32,8 @@ class ReservasController extends BaseController{
 
     function delete(){
         $this->chckRol('cliente');
-        // $data = ;
-        // $this->model->anadirButaca($_GET['id']);
+        $data = $this->model->getIdSesion($_GET['id']);
+        $this->model->anadirButaca($data);
         $this->model->deleteReserva($_GET['id']);
         $this->mostrarReservas();
     }
