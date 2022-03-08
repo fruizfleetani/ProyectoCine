@@ -8,11 +8,11 @@ class Reservas extends Database{
           parent::__construct();
         }
 
-    // function getIdSesion($id){
-    //     $prep = $this->conexion->prepare('select sesion_id from reservas where id= :id');
-    //     $prep->execute(array(':id'=>$id));
-    //     return $prep;
-    // }
+    function getIdSesion($id){
+        $prep = $this->conexion->prepare('select sesion_id from reservas,sesiones where reservas.id= :id');
+        $prep->execute(array(':id'=>$id));
+        return $prep;
+    }
 
     function consulReservas($id = ''){
         if ($id != ''){

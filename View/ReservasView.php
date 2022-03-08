@@ -14,7 +14,7 @@ class ReservasView{
         print('<h4>'.$msg.'</h4>');
     }
 
-    function mostrarReservas($reservas){
+    function mostrReservas($reservas){
         echo '<table><tr><td>Película</td><td>Fecha</td><td>Acciones</td></tr>';
         foreach($reservas as $r){
             echo "<tr><td>".$r['pelicula']."</td><td>".$r['fecha']."</td><td><a href='index.php?controllador=Controller\ReservasController&accion=delete&id=".$r['id']."'>Borrar</a></td></tr>";

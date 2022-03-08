@@ -21,7 +21,7 @@ class ReservasController extends BaseController{
     function mostrarReservas(){
         $this->chckRol('cliente');
         $reservas = $this->model->consulReservas($_SESSION['userdata']['id']);
-        $this->view->mostrarReservas($reservas);
+        $this->view->mostrReservas($reservas);
     }
 
     function mostrarAdmReservas(){
@@ -31,16 +31,17 @@ class ReservasController extends BaseController{
     }
 
     function delete(){
-        $this->chckRol('administrador');
+        $this->chckRol('cliente');
         // $data = ;
         // $this->model->anadirButaca($_GET['id']);
         $this->model->deleteReserva($_GET['id']);
-        $this->mostrarAdmReservas();
+        $this->mostrarReservas();
     }
 
     function deleteAdm(){
         $this->chckRol('administrador');
         // $data = $this->model->getIdSesion($_GET['id']);
+        // var_dump($data);
         // $this->model->anadirButaca($data);
         $this->model->deleteReserva($_GET['id']);
         $this->mostrarAdmReservas();
