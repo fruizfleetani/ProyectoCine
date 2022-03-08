@@ -42,9 +42,6 @@ class SesionController extends BaseController{
     function registro(){
         $this->chckRol('administrador');
         $data=[];
-        if(isset($_POST['id']) && !empty($_POST['id'])){
-            $data[':id'] = filter_var($_POST['id'],FILTER_VALIDATE_INT);
-        }
         if(isset($_POST['pelicula']) && !empty($_POST['pelicula'])){
             $data[':pelicula'] = filter_var($_POST['pelicula'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         }
@@ -54,7 +51,7 @@ class SesionController extends BaseController{
         if(isset($_POST['butacas_disponibles']) && !empty($_POST['butacas_disponibles']) && filter_var($_POST['butacas_disponibles'], FILTER_VALIDATE_INT)){
             $data[':butacas_disponibles'] = filter_var($_POST['butacas_disponibles'],FILTER_SANITIZE_NUMBER_INT);
         }
-        if(count($data) < 4){
+        if(count($data) < 3){
             $this->view->displayError('registrando Sesion');
         }else{
             $this->model->insertSesion($data);

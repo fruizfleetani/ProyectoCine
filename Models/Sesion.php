@@ -30,7 +30,7 @@ class Sesion extends Database{
     }
 
     function insertSesion($data){
-        $prep = $this->conexion->prepare('Insert into sesiones values(:id,:pelicula,:fecha,:butacas_disponibles)');
+        $prep = $this->conexion->prepare('Insert into sesiones (pelicula, fecha, butacas_disponibles) values(:pelicula,:fecha,:butacas_disponibles)');
         foreach($data as $clave=>$dato){
             $prep->bindValue($clave,$dato);
         }

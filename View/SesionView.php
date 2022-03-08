@@ -37,8 +37,6 @@ class SesionView{
             "<fieldset>
                 <legend>Registro sesiones</legend>
                 <form method='POST' action='index.php?controllador=Controller\SesionController&accion=registro' >
-                <label>ID</label>
-                <input type='number' name='id'><br>
                 <label>Película</label>
                 <input name='pelicula'><br>
                 <label>Fecha</label>
