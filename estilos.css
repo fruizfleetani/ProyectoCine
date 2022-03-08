@@ -107,24 +107,24 @@ a {
     display: flex;
 }
 
-.tabla_doctores {
+/* .tabla_sesiones {
     width: 150vh;
     margin-left: 2vh;
     background-color: lightblue;
     padding: 4vh;
 }
 
-.tabla_doctores table {
+.tabla_sesiones table {
     width: 70%;
     background-color: lightblue;
     font-size: 3vh;
 }
 
-.tabla_doctores td {
+.tabla_sesiones td {
     padding: 2vh;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-}
+} */
 
 .info {
     width: 150vh;

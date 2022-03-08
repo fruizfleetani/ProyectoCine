@@ -85,7 +85,7 @@ class SesionController extends BaseController{
         }
         $id = filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);
         if(count($data) < 3){
-            $this->view->displayError('Actualizando sesión');
+            $this->view->displayError('Debes introducir todos los datos requeridos');
         }else{
             $this->model->updateSesion($data,$id);
             $this->mostrarAdmSesion();

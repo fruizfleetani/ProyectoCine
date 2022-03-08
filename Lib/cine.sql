@@ -84,7 +84,7 @@ CREATE TABLE `sesiones` (
 --
 
 INSERT INTO `sesiones` VALUES
-(1, 'Spider-Man', '2022-03-22 16:00', 3),
+(1, 'Spider-Man', '2022-03-22 16:00', 1),
 (2, 'Batman', '2022-03-17 18:00', 200),
 (3, 'Los pingüinos de Magadascar', '2022-03-18 20:00', 150),
 (4, 'Lo Imposible', '2022-03-14 21:00', 100);

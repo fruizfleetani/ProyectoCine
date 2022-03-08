@@ -10,8 +10,7 @@ class Reservas extends Database{
 
     function getIdSesion($id){
         $prep = $this->conexion->prepare('select sesion_id from reservas,sesiones where reservas.id= :id');
-        $prep->execute(array(':id'=>$id));
-        return $prep;
+        return $prep->execute(array(':id'=>$id));
     }
 
     function consulReservas($id = ''){
@@ -56,6 +55,14 @@ class Reservas extends Database{
         $prep = $this->conexion->prepare('update sesiones set butacas_disponibles = (butacas_disponibles+1) where id=:id');
         $prep->execute(array(':id'=>$id));
     }
+
+    // function anadirButaca2($id_reserva){
+    //     $this->conexion->$this->conexion->prepare("select sesion_id from reservas where id= :id");
+    //     $this->conexion->execute(array(':id'=>$id_reserva));
+    //     $id = $this->conexion->extraer_registro();
+    //     $prep = $this->conexion->prepare('update sesiones set butacas_disponibles = (butacas_disponibles+1) where id=:id');
+    //     $prep->execute(array(':id'=>$id));
+    // }
 }
 
 

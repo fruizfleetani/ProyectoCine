@@ -40,9 +40,9 @@ class ReservasController extends BaseController{
 
     function deleteAdm(){
         $this->chckRol('administrador');
-        // $data = $this->model->getIdSesion($_GET['id']);
-        // var_dump($data);
-        // $this->model->anadirButaca($data);
+        $data = $this->model->getIdSesion($_GET['id']);
+        $this->model->anadirButaca($data);
+        // $this->model->anadirButaca2($_GET['id']);
         $this->model->deleteReserva($_GET['id']);
         $this->mostrarAdmReservas();
     }
@@ -101,9 +101,9 @@ class ReservasController extends BaseController{
         $mail->Port = 587;
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->SMTPSecure = 'STARTTLS';            //Enable implicit TLS encryption
-        $mail->Username   = 'cineFernandoRuiz@hotmail.com';                     //SMTP username
+        $mail->Username   = 'cineFRuizFleetani@hotmail.com';                     //SMTP username
         $mail->Password   = 'micine1234';                               //SMTP password
-        $mail->setFrom('cineFernandoRuiz@hotmail.com');
+        $mail->setFrom('cineFRuizFleetani@hotmail.com');
         $mail->addAddress($usuario['correo']);     //Add a recipient
         $mail->Subject = 'Confirmación de su reserva en el cine Steamulation';
         $mensaje = 
@@ -126,7 +126,7 @@ class ReservasController extends BaseController{
             echo 'Mailer Error: ' . $mail->ErrorInfo;
             die();
         } else {
-            echo 'Se le ha enviado un correo con los datos de la cita.';
+            echo 'Se le ha enviado un correo con los datos de la reserva.';
         }
         
     }
